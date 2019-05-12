@@ -30,8 +30,11 @@ void populate_list(std::list<int> &li) {
 	}
 }
 
+void sorting(std::list<int> &li);
+
 int main()
 {
+	
 	std::list<int> li;
 
 	populate_list(li);
@@ -40,16 +43,38 @@ int main()
 
 	std::cout << "Hello World!\n";
 
-	sort(li);
+	sorting(li);
+
+	//sort(li);
 
 	print_list(li);
+	
+	test();
 }
 
 
 void test() {
 
 
+	std::list<int> li;
 
+	li.push_back(5);
+	li.push_back(15);
+	li.push_back(25);
+	li.push_back(35);
+	li.push_back(45);
+	li.push_back(55);
+
+
+	auto i = li.begin();
+
+	++i;
+	++i;
+	++i;
+
+	*i = 10;
+
+	std::cout << *i << std::endl;
 
 
 }
