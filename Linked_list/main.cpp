@@ -2,35 +2,16 @@
 //
 
 #include "pch.h"
+#include "Linked_list.h"
 #include <iostream>
 #include <list>
 #include <random>
 
-void sort(std::list<int> &li);
+
 
 void test();
 
-void print_list(std::list<int> &li) {
 
-	for (auto i = li.begin(); i != li.end(); ++i) {
-
-		std::cout << *i << std::endl;
-	}
-}
-
-void populate_list(std::list<int> &li) {
-
-	std::random_device rd;
-	std::mt19937 rnd;
-	std::uniform_int_distribution<int> range(0, 250);
-
-	for (int i = 0; i < 20; i++) {
-
-		li.push_back(range(rnd));
-	}
-}
-
-void sorting(std::list<int> &li);
 
 int main()
 {
@@ -45,8 +26,6 @@ int main()
 
 	sorting(li);
 
-	//sort(li);
-
 	print_list(li);
 	
 	test();
@@ -54,28 +33,6 @@ int main()
 
 
 void test() {
-
-
-	std::list<int> li;
-
-	li.push_back(5);
-	li.push_back(15);
-	li.push_back(25);
-	li.push_back(35);
-	li.push_back(45);
-	li.push_back(55);
-
-
-	auto i = li.begin();
-
-	++i;
-	++i;
-	++i;
-
-	*i = 10;
-
-	std::cout << *i << std::endl;
-
 
 }
 
